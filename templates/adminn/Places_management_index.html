@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Registered traveller</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="/static/Table_temp/css/style.css">
+
+	</head>
+	<body>
+	<section class="ftco-section">
+		<div class="container">
+{#			<div class="row justify-content-center">#}
+{#				<div class="col-md-6 text-center mb-5">#}
+{#					<h2 class="heading-section">Table #07</h2>#}
+{#				</div>#}
+{#			</div>#}
+			<div class="row">
+				<div class="col-md-12">
+{#					<div class="table-wrap">#}
+                        <form action="" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+						<table class="table table-bordered table-dark table-hover">
+						  <thead>
+             <tr>
+    <th width="29" scope="col">#</th>
+    <th width="65" scope="col">Name</th>
+    <th width="63" scope="col">Image</th>
+    <th width="92" scope="col">Address</th>
+    <th width="129" scope="col">&nbsp;</th>
+  </tr>
+    {% for n in places %}
+  <tr>
+    <td>{{ forloop.counter }}</td>
+    <td>&nbsp;{{ n.Name }}</td>
+    <td><img src="{{ n.Image }}" width="250" height="180" alt=""/></td>
+    <td>&nbsp;{{ n.Place}},{{ n.Post }},{{ n.Pin }}</td>
+    <td><a href="/edit_place/{{ n.id }}">Edit</a> / <a href="/Delete/{{ n.id }}">Delete</a></td>
+  </tr>
+    {% endfor %}
+                        </table>
+                        </form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="/static/Table_temp/js/jquery.min.js"></script>
+  <script src="/static/Table_temp/js/popper.js"></script>
+  <script src="/static/Table_temp/js/bootstrap.min.js"></script>
+  <script src="/static/Table_temp/js/main.js"></script>
+
+	</body>
+</html>
+

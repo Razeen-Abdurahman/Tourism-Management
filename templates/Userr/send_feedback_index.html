@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Registered traveller</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="/static/Table_temp/css/style.css">
+
+	</head>
+	<body>
+	<section class="ftco-section">
+		<div class="container">
+{#			<div class="row justify-content-center">#}
+{#				<div class="col-md-6 text-center mb-5">#}
+{#					<h2 class="heading-section">Table #07</h2>#}
+{#				</div>#}
+{#			</div>#}
+			<div class="row">
+				<div class="col-md-12">
+{#					<div class="table-wrap">#}
+                        <form action="" method="post">
+                            {% csrf_token %}
+						<table class="table table-bordered table-dark table-hover">
+						  <thead>
+           <tr>
+    <th width="350" scope="row">Enter the Feedback:</th>
+    <td width="200"><label for="textarea"></label>
+      <textarea name="textarea" id="textarea" cols="80" rows="5"></textarea></td>
+  </tr>
+  <tr>
+    <th colspan="2" scope="row" style="text-align: center"><input type="submit" name="button" id="button" value="Send" /></th>
+    </tr>
+                        </table>
+                        </form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="/static/Table_temp/js/jquery.min.js"></script>
+  <script src="/static/Table_temp/js/popper.js"></script>
+  <script src="/static/Table_temp/js/bootstrap.min.js"></script>
+  <script src="/static/Table_temp/js/main.js"></script>
+
+	</body>
+</html>
+

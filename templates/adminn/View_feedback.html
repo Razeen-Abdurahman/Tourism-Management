@@ -1,0 +1,33 @@
+{% extends 'adminn/Admin_index.html' %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+<body>
+<form action="" method="post">
+    {% csrf_token %}
+<table width="362" border="1" class="table table-active table-dark">
+  <tr>
+    <th width="13" scope="col">#</th>
+    <th width="106" scope="col">Feedback</th>
+    <th width="88" scope="col">Date</th>
+    <th width="103" scope="col">Username</th>
+  </tr>
+    {% for f in feed %}
+  <tr>
+    <td>&nbsp;{{ forloop.counter }}</td>
+    <td>&nbsp;{{ f.Feedback }}</td>
+    <td>&nbsp;{{ f.date }}</td>
+      <td>&nbsp;{{ f.USERID.Name }}</td>
+
+  </tr>
+    {% endfor %}
+</table>
+
+</form>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'Userr/User_index.html' %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+<body>
+<form action="" method="post">
+    {% csrf_token %}
+<table width="514" border="1" class="table table-active table-dark">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Name</th>
+    <th scope="col">Type</th>
+    <th scope="col">Capacity</th>
+    <th scope="col">Details</th>
+    <th scope="col">Cost</th>
+    <th scope="col">&nbsp;</th>
+  </tr>
+    {% for x  in veh %}
+  <tr>
+    <td>&nbsp;{{ forloop.counter }}</td>
+    <td>&nbsp;{{ x.Name }}</td>
+    <td>&nbsp;{{ x.Type }}</td>
+    <td>&nbsp;{{ x.Capacity }}</td>
+    <td>&nbsp;{{ x.Details }}</td>
+    <td>&nbsp;{{ x.Cost }}</td>
+      <td><button class="btn btn-success text-white"><a href="/Bookss/{{ x.id }}">Book</a></button>
+  </tr>
+    {% endfor %}
+</table>
+
+</form>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Registered traveller</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="/static/Table_temp/css/style.css">
+
+	</head>
+	<body>
+	<section class="ftco-section">
+		<div class="container">
+{#			<div class="row justify-content-center">#}
+{#				<div class="col-md-6 text-center mb-5">#}
+{#					<h2 class="heading-section">Table #07</h2>#}
+{#				</div>#}
+{#			</div>#}
+			<div class="row">
+				<div class="col-md-12">
+{#					<div class="table-wrap">#}
+                        <form action="" method="post">
+                            {% csrf_token %}
+						<table class="table table-bordered table-dark table-hover">
+						  <thead>
+              <tr>
+    <th width="15" scope="col">#</th>
+    <th width="74" scope="col">Name</th>
+    <th width="62" scope="col">Type</th>
+    <th width="115" scope="col">Capacity</th>
+    <th width="90" scope="col">Details</th>
+    <th width="56" scope="col">Cost</th>
+    <th width="134" scope="col">&nbsp;</th>
+  </tr>
+    {% for v in vehi %}
+  <tr>
+    <td>&nbsp;{{ forloop.counter }}</td>
+    <td>&nbsp;{{ v.Name }}</td>
+    <td>&nbsp;{{ v.Type }}</td>
+    <td>&nbsp;{{  v.Capacity}}</td>
+    <td>&nbsp;{{  v.Details}}</td>
+    <td>&nbsp;{{  v.Cost}}</td>
+    <td><a href="/edit_vehicle/{{ v.id }}">Edit</a> / <a href="/delete2/{{ v.id }}">Delete</a></td>
+  </tr>
+    {% endfor %}
+                        </table>
+                        </form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="/static/Table_temp/js/jquery.min.js"></script>
+  <script src="/static/Table_temp/js/popper.js"></script>
+  <script src="/static/Table_temp/js/bootstrap.min.js"></script>
+  <script src="/static/Table_temp/js/main.js"></script>
+
+	</body>
+</html>
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>FormWizard_v10</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="colorlib.com">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="/static/Registration_temp/fonts/material-design-iconic-font/css/material-design-iconic-font.css">
+
+		<!-- DATE-PICKER -->
+		<link rel="stylesheet" href="/static/Registration_temp/vendor/date-picker/css/datepicker.min.css">
+
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="/static/Registration_temp/css/style.css">
+	</head>
+	<body>
+		<div class="wrapper">
+            <form action="" id="wizard" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+        		<!-- SECTION 1 -->
+                <h4></h4>
+                <section>
+                    <div class="inner">
+                    	<a href="#" class="avartar">
+                    		<img src="/static/Registration_temp/images/vibez.png" alt="">
+                    	</a>
+                    	<div class="form-row">
+                    		<div class="form-holder">
+                    			<input type="text" class="form-control" placeholder="Name" name="textfield"required>
+                    			<i class="zmdi zmdi-account-box-o small"></i>
+                    		</div>
+                    	</div>
+                    	<div class="form-row">
+                    		<div class="form-holder">
+                    			<input type="password" class="form-control" placeholder="Password" name="textfield7"required>
+                    			<i class="zmdi zmdi-lock-open small"></i>
+                    		</div>
+                    	</div>
+                    	<div class="form-row">
+                    		<div class="form-holder">
+                    			<input type="text" class="form-control" placeholder="Email" name="textfield5"required
+                    			<i class="zmdi zmdi-email small"></i>
+                    		</div>
+                    	</div>
+                    	<div class="form-row">
+                    		<div class="form-holder">
+                    			<input type="tel" class="form-control" placeholder="Phone no" name="textfield6"  minlength="0" maxlength="10" required>
+                    			<i class="zmdi zmdi-smartphone-android"></i>
+                    		</div>
+                    	</div>
+                        <div class="form-row">
+                    		<div class="form-holder">
+                    			<input type="file" class="form-control"  name="fileField"required>
+                    			<i class="zmdi zmdi-account-box-o small"></i>
+                    		</div>
+                    	</div>
+                    	<div class="form-row">
+                    		<div class="form-holder">
+                    			<input type="text" class="form-control" placeholder="Place" name="textfield2"required>
+                                <i class="zmdi zmdi-map small"></i>
+                    		</div>
+                    	</div>
+                    	<div class="form-row">
+                    		<div class="form-holder">
+                    			<input type="text" class="form-control" placeholder="Post" name="textfield3" required>
+                                <i class="zmdi zmdi-account-box-o small"></i>
+
+                    		</div>
+                    	</div>
+                        <div class="form-row">
+                    		<div class="form-holder">
+                    			<input type="tel" class="form-control" placeholder="Pin" name="textfield4" minlength="0" maxlength="10" required>
+                                <i class="zmdi zmdi-account-box-o small"></i>
+
+                    		</div>
+                    	</div>
+                    </div>
+                    <div class="form-row">
+                    		<div class="form-holder">
+                    			<input type="submit" class="form-control bg-dark" value="Register" style="background-color: black;color: white;cursor: pointer;">
+                    		</div>
+                    	</div>
+                </section>
+            </form>
+		</div>
+
+		<script src="/static/Registration_temp/js/jquery-3.3.1.min.js"></script>
+
+		<!-- JQUERY STEP -->
+		<script src="/static/Registration_temp/js/jquery.steps.js"></script>
+
+		<!-- DATE-PICKER -->
+		<script src="/static/Registration_temp/vendor/date-picker/js/datepicker.js"></script>
+		<script src="/static/Registration_temp/vendor/date-picker/js/datepicker.en.js"></script>
+
+		<script src="static/Registration_temp/js/main.js"></script>
+
+<!-- Template created and distributed by Colorlib -->
+</body>
+</html>
